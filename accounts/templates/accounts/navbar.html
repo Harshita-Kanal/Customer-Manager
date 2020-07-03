@@ -1,0 +1,26 @@
+{% load static %}
+
+<style>
+#hello-msg{
+font-size: 18px;
+color:#fff;
+margin-right: 20px;
+}
+</style>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="navbar-nav">
+ <a  id="pink" class="nav-item nav-link active" href="#"><img src="{%static 'images/customer-service.png'%}" width="25px" height="25px">THE ORDER APP</a>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{%url 'home'%}">Dashboard </a>
+      <a class="nav-item nav-link" href="{%url 'products'%}">Products</a>
+ 
+    </div>
+  </div>
+  <span id="hello-msg">Hello, {{request.user}}</span>
+  <span ><a id="hello-msg" href="{% url 'logout'%}">Logout</a></span>
+</nav>
